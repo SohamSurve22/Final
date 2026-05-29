@@ -1,0 +1,192 @@
+
+    :root {
+      --bg: #f4efe8;
+      --surface: #fffaf4;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #d97706;
+      --accent-dark: #b45309;
+      --line: rgba(31, 41, 55, 0.12);
+      --shadow: 0 18px 40px rgba(31, 41, 55, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(217, 119, 6, 0.12), transparent 32%),
+        linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .site-header {
+      background: rgba(255, 250, 244, 0.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+      padding: 18px 22px;
+      position: sticky;
+      top: 18px;
+      z-index: 10;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--accent), #f59e0b);
+      color: white;
+      font-size: 1.1rem;
+      box-shadow: 0 10px 24px rgba(217, 119, 6, 0.28);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 14px;
+      width: 46px;
+      height: 46px;
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      flex-direction: column;
+      padding: 0;
+    }
+
+    .menu-toggle span {
+      width: 20px;
+      height: 2px;
+      background: var(--text);
+      border-radius: 999px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      padding: 11px 16px;
+      border-radius: 999px;
+      transition: background 0.2s ease, color 0.2s ease;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover,
+    .nav-links a:focus-visible {
+      background: rgba(217, 119, 6, 0.12);
+      color: var(--accent-dark);
+      outline: none;
+    }
+
+    .hero {
+      padding: 64px 12px 32px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+    }
+
+    .hero-card {
+      max-width: 720px;
+      padding: 42px 28px;
+      border-radius: 28px;
+      background: rgba(255, 255, 255, 0.7);
+      border: 1px solid rgba(31, 41, 55, 0.08);
+      box-shadow: 0 24px 60px rgba(31, 41, 55, 0.08);
+    }
+
+    .hero h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      line-height: 1.1;
+    }
+
+    .hero p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: calc(100% + 14px);
+        left: 18px;
+        right: 18px;
+        display: grid;
+        gap: 8px;
+        padding: 14px;
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 20px;
+        box-shadow: var(--shadow);
+        transform-origin: top;
+        transform: scaleY(0.92);
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+      }
+
+      .nav-links a {
+        border-radius: 14px;
+        background: rgba(31, 41, 55, 0.04);
+      }
+
+      .site-header.menu-open .nav-links {
+        opacity: 1;
+        transform: scaleY(1);
+        pointer-events: auto;
+      }
+
+      .site-header.menu-open .menu-toggle span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      .site-header.menu-open .menu-toggle span:nth-child(2) {
+        opacity: 0;
+      }
+
+      .site-header.menu-open .menu-toggle span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }

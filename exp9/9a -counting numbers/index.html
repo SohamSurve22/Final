@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Session User Counter</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1>Session users</h1>
+      <p class="description">Add a name to count users in this tab session.</p>
+
+      <form id="loginForm" class="login-form">
+        <label for="userName">User name</label>
+        <div class="row">
+          <input type="text" id="userName" placeholder="Enter a name" autocomplete="off" />
+          <button type="submit">Log in</button>
+        </div>
+      </form>
+
+      <div class="stats">
+        <div>
+          <span class="label">Active users</span>
+          <strong id="userCount">0</strong>
+        </div>
+        <button type="button" id="clearAll" class="ghost">Clear session</button>
+      </div>
+
+      <ul id="userList" class="user-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
