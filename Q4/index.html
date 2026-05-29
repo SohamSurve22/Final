@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shivaji College of Engineering - Home</title>
+  <!-- Link to shared stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="site-header">
+    <!-- Simple SVG as college logo placeholder -->
+    <div class="logo">
+      <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+        <rect width="50" height="50" rx="6" fill="#1a4f8a"/>
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+              fill="white" font-size="22" font-family="serif" font-weight="bold">S</text>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>Shivaji College of Engineering &amp; Technology</h1>
+      <p>Affiliated to Mumbai University &nbsp;|&nbsp; Estd. 1998 &nbsp;|&nbsp; NAAC Accredited</p>
+    </div>
+  </header>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#departments">Departments</a></li>
+      <li><a href="#facilities">Facilities</a></li>
+      <li><a href="#admission">Admission</a></li>
+      <li><a href="feedback.html">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+
+    <!-- Welcome Banner -->
+    <section class="welcome-banner">
+      <!-- Simple inline SVG image representing a college building -->
+      <div class="college-image">
+        <svg width="100%" height="180" viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg">
+          <!-- Sky background -->
+          <rect width="700" height="180" fill="#dce9f5"/>
+          <!-- Ground -->
+          <rect y="140" width="700" height="40" fill="#8fba8f"/>
+          <!-- Main building -->
+          <rect x="150" y="50" width="400" height="100" fill="#c9d4e0" stroke="#7a90a8" stroke-width="1.5"/>
+          <!-- Roof triangle -->
+          <polygon points="150,50 350,10 550,50" fill="#a0b0c8" stroke="#7a90a8" stroke-width="1.5"/>
+          <!-- Door -->
+          <rect x="310" y="100" width="80" height="50" fill="#6b8cad" rx="4"/>
+          <!-- Windows row -->
+          <rect x="180" y="70" width="50" height="40" fill="#b8d4f0" stroke="#7a90a8" stroke-width="1"/>
+          <rect x="260" y="70" width="50" height="40" fill="#b8d4f0" stroke="#7a90a8" stroke-width="1"/>
+          <rect x="400" y="70" width="50" height="40" fill="#b8d4f0" stroke="#7a90a8" stroke-width="1"/>
+          <rect x="480" y="70" width="50" height="40" fill="#b8d4f0" stroke="#7a90a8" stroke-width="1"/>
+          <!-- Flag on top -->
+          <line x1="350" y1="10" x2="350" y2="-10" stroke="#555" stroke-width="2"/>
+          <rect x="350" y="-10" width="28" height="16" fill="#e63946"/>
+          <!-- Sun -->
+          <circle cx="620" cy="35" r="22" fill="#f9c74f"/>
+          <!-- Trees -->
+          <rect x="80" y="110" width="10" height="30" fill="#5a3e2b"/>
+          <ellipse cx="85" cy="105" rx="22" ry="25" fill="#4a7c59"/>
+          <rect x="600" y="110" width="10" height="30" fill="#5a3e2b"/>
+          <ellipse cx="605" cy="105" rx="22" ry="25" fill="#4a7c59"/>
+          <!-- College name on building -->
+          <text x="350" y="130" text-anchor="middle" font-size="11" fill="#2c3e50"
+                font-family="Georgia, serif" font-weight="bold">SCET Campus</text>
+        </svg>
+      </div>
+      <div class="welcome-text">
+        <h2>Welcome to SCET</h2>
+        <p>
+          Shivaji College of Engineering &amp; Technology has been shaping engineers and
+          technologists since 1998. We offer quality education with a focus on practical
+          learning, industry exposure, and overall student development.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== COURSES TABLE ===== -->
+    <section id="courses">
+      <h2 class="section-title">Courses Offered</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Course Name</th>
+            <th>Duration</th>
+            <th>Annual Fees (₹)</th>
+            <th>Total Seats</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>B.E. Computer Engineering</td>
+            <td>4 Years</td>
+            <td>85,000</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>B.E. Information Technology</td>
+            <td>4 Years</td>
+            <td>80,000</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>B.E. Electronics &amp; Telecomm.</td>
+            <td>4 Years</td>
+            <td>78,000</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>B.E. Mechanical Engineering</td>
+            <td>4 Years</td>
+            <td>75,000</td>
+            <td>60</td>
+          </tr>
+          <tr>
+            <td>M.E. Computer Engineering</td>
+            <td>2 Years</td>
+            <td>65,000</td>
+            <td>24</td>
+          </tr>
+          <tr>
+            <td>Diploma in Computer Science</td>
+            <td>3 Years</td>
+            <td>30,000</td>
+            <td>60</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== DEPARTMENTS TABLE ===== -->
+    <section id="departments">
+      <h2 class="section-title">Departments &amp; Faculty</h2>
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Department</th>
+            <th>HOD Name</th>
+            <th>No. of Faculty</th>
+            <th>Labs Available</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Computer Engineering</td>
+            <td>Dr. Sunita Patil</td>
+            <td>18</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Information Technology</td>
+            <td>Prof. Rajesh Deshmukh</td>
+            <td>16</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Electronics &amp; Telecomm.</td>
+            <td>Dr. Anil Sharma</td>
+            <td>14</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Mechanical Engineering</td>
+            <td>Prof. Meera Joshi</td>
+            <td>20</td>
+            <td>6</td>
+          </tr>
+          <tr>
+            <td>Applied Sciences</td>
+            <td>Dr. Priya Nair</td>
+            <td>10</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ===== TWO COLUMN SECTION: ADMISSION + FACILITIES ===== -->
+    <div class="two-col">
+
+      <!-- Ordered List: Admission Process -->
+      <section id="admission-process">
+        <h2 class="section-title">Admission Process</h2>
+        <ol class="styled-list">
+          <li>Fill the online application form on the official MHT-CET portal.</li>
+          <li>Appear for MHT-CET entrance exam (or JEE Main).</li>
+          <li>Wait for the CAP (Centralized Admission Process) round results.</li>
+          <li>Visit the college for document verification with original certificates.</li>
+          <li>Pay the admission fee and confirm your seat.</li>
+          <li>Collect your college ID card and fee receipt.</li>
+          <li>Attend the orientation program before classes begin.</li>
+        </ol>
+      </section>
+
+      <!-- Unordered List: Facilities -->
+      <section id="facilities">
+        <h2 class="section-title">College Facilities</h2>
+        <ul class="styled-list bullet-list">
+          <li>Well-equipped computer laboratories (200+ systems)</li>
+          <li>Central library with 15,000+ books and e-journals</li>
+          <li>High-speed Wi-Fi campus connectivity</li>
+          <li>Separate boys and girls hostel</li>
+          <li>Sports ground and indoor games room</li>
+          <li>Canteen with affordable meal options</li>
+          <li>Training &amp; Placement Cell</li>
+          <li>Medical room with first aid facility</li>
+          <li>Seminar hall and auditorium</li>
+          <li>CCTV-monitored campus security</li>
+        </ul>
+      </section>
+
+    </div><!-- end two-col -->
+
+    <!-- ===== SECOND COLLEGE IMAGE ===== -->
+    <section class="image-section">
+      <div class="college-image campus-life">
+        <svg width="100%" height="160" viewBox="0 0 700 160" xmlns="http://www.w3.org/2000/svg">
+          <rect width="700" height="160" fill="#f0f4f0"/>
+          <!-- Library building -->
+          <rect x="30" y="60" width="160" height="90" fill="#d5c9b4" stroke="#a09070" stroke-width="1.5"/>
+          <text x="110" y="115" text-anchor="middle" font-size="10" fill="#4a3a20">Library</text>
+          <!-- Lab block -->
+          <rect x="220" y="40" width="260" height="110" fill="#c4d0c8" stroke="#7a9a80" stroke-width="1.5"/>
+          <text x="350" y="100" text-anchor="middle" font-size="10" fill="#2c4a30">Lab Block</text>
+          <!-- Students (simple silhouettes) -->
+          <circle cx="510" cy="118" r="8" fill="#5a7a9a"/>
+          <line x1="510" y1="126" x2="510" y2="148" stroke="#5a7a9a" stroke-width="3"/>
+          <circle cx="540" cy="118" r="8" fill="#9a6a5a"/>
+          <line x1="540" y1="126" x2="540" y2="148" stroke="#9a6a5a" stroke-width="3"/>
+          <circle cx="570" cy="118" r="8" fill="#6a9a6a"/>
+          <line x1="570" y1="126" x2="570" y2="148" stroke="#6a9a6a" stroke-width="3"/>
+          <!-- Path -->
+          <rect x="0" y="148" width="700" height="12" fill="#b0a090"/>
+          <!-- Banner text -->
+          <text x="350" y="28" text-anchor="middle" font-size="13" fill="#1a4f8a"
+                font-family="Georgia, serif">Campus Life @ SCET</text>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ===== STUDENT INQUIRY / ADMISSION FORM ===== -->
+    <section id="admission">
+      <h2 class="section-title">Student Inquiry / Admission Form</h2>
+      <p class="form-note">Fill in the details below and we will get back to you shortly.</p>
+
+      <!-- Basic HTML5 validation used (required, type, pattern) -->
+      <form id="inquiryForm" class="styled-form" onsubmit="handleInquiry(event)">
+
+        <!-- Name field -->
+        <div class="form-group">
+          <label for="name">Full Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name"
+                 required minlength="3" maxlength="60" />
+        </div>
+
+        <!-- Email field -->
+        <div class="form-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" placeholder="example@email.com" required />
+        </div>
+
+        <!-- Phone field -->
+        <div class="form-group">
+          <label for="phone">Phone Number <span class="required">*</span></label>
+          <!-- pattern for 10-digit Indian mobile number -->
+          <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number"
+                 pattern="[6-9][0-9]{9}" required />
+          <small>Format: 10-digit mobile number (e.g. 9876543210)</small>
+        </div>
+
+        <!-- Course selection -->
+        <div class="form-group">
+          <label for="course">Course Interested In <span class="required">*</span></label>
+          <select id="course" name="course" required>
+            <option value="">-- Select Course --</option>
+            <option value="be_cs">B.E. Computer Engineering</option>
+            <option value="be_it">B.E. Information Technology</option>
+            <option value="be_entc">B.E. Electronics &amp; Telecomm.</option>
+            <option value="be_mech">B.E. Mechanical Engineering</option>
+            <option value="me_cs">M.E. Computer Engineering</option>
+            <option value="diploma_cs">Diploma in Computer Science</option>
+          </select>
+        </div>
+
+        <!-- Message / query -->
+        <div class="form-group">
+          <label for="message">Your Query / Message</label>
+          <textarea id="message" name="message" rows="4"
+                    placeholder="Type your message or query here..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Submit Inquiry</button>
+
+        <!-- Success message (hidden by default, shown by JS) -->
+        <p id="inquiryMsg" class="success-msg" style="display:none;"></p>
+
+      </form>
+    </section>
+
+  </main><!-- end container -->
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>Plot No. 14, Sector 7, Nerul,<br/>Navi Mumbai – 400706</p>
+        <p>Phone: (022) 2770-1234</p>
+        <p>Email: info@scet.edu.in</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="#courses">Courses</a></p>
+        <p><a href="feedback.html">Feedback</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Office Hours</h3>
+        <p>Monday – Saturday</p>
+        <p>9:00 AM – 5:00 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Shivaji College of Engineering &amp; Technology. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Link to shared JS file -->
+  <script src="script.js"></script>
+
+</body>
+</html>

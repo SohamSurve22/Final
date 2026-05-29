@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Practical Assignment</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== TASK B: Navigation Bar ==================== -->
+  <!-- Horizontal nav bar using ul/li with CSS display:inline-block -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page heading -->
+  <div class="page-title">
+    <h1>Web Design Practical</h1>
+    <p>Task A &mdash; Feedback Form &nbsp;|&nbsp; Task B &mdash; Navigation Bar</p>
+  </div>
+
+  <!-- ==================== TASK A: Feedback Form ==================== -->
+  <!-- Semantic <main> wraps the primary content of the page -->
+  <main>
+    <div class="form-container">
+
+      <h2>Feedback Form</h2>
+      <p class="subtitle">We value your feedback. Please fill in the form below.</p>
+
+      <!-- action="#" keeps form on same page; method="post" is standard practice -->
+      <form action="#" method="post">
+
+        <!-- Name Field -->
+        <div class="form-group">
+          <label for="name">Full Name <span class="required">*</span></label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your full name"
+            required
+          />
+        </div>
+
+        <!-- Email Field -->
+        <div class="form-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+
+        <!-- Comments / Feedback Textarea -->
+        <div class="form-group">
+          <label for="comments">Comments / Feedback <span class="required">*</span></label>
+          <textarea
+            id="comments"
+            name="comments"
+            rows="5"
+            placeholder="Write your feedback here..."
+            required
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn-submit">Submit Feedback</button>
+
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>Practical Assignment &copy; 2025 &nbsp;|&nbsp; Submitted by: Student Name &nbsp;|&nbsp; Roll No: XX</p>
+  </footer>
+
+</body>
+</html>

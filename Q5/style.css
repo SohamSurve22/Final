@@ -1,0 +1,228 @@
+/* ============================================================
+   style.css — Online News Article Page
+   Student Name : _______________   Roll No : ___
+   Date         : _______________   Subject  : Web Design
+   ============================================================ */
+ 
+/* ---------- Global Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.7;
+}
+ 
+/* ============================================================
+   HEADER — site name and tagline
+   ============================================================ */
+ 
+.site-header {
+  background-color: #1a252f;
+  color: #fff;
+  text-align: center;
+  padding: 22px 20px 16px;
+  border-bottom: 4px solid #e67e22;
+}
+ 
+.site-header h1 {
+  font-size: 28px;
+  letter-spacing: 1px;
+}
+ 
+.tagline {
+  font-size: 13px;
+  color: #aab7c4;
+  margin-top: 4px;
+  font-style: italic;
+}
+ 
+/* ============================================================
+   NAV BAR — horizontal links
+   ============================================================ */
+ 
+.navbar {
+  background-color: #2c3e50;
+}
+ 
+.navbar ul {
+  list-style: none;
+  padding: 0 16px;
+}
+ 
+.navbar ul li {
+  display: inline-block;
+}
+ 
+.navbar ul li a {
+  display: block;
+  color: #ecf0f1;
+  text-decoration: none;
+  padding: 12px 18px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+}
+ 
+.navbar ul li a:hover {
+  background-color: #e67e22;
+  color: #fff;
+}
+ 
+/* ============================================================
+   WRAPPER — two-column layout (article + sidebar)
+   ============================================================ */
+ 
+.wrapper {
+  display: flex;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 24px auto;
+  padding: 0 16px;
+  align-items: flex-start;
+}
+ 
+/* ============================================================
+   ARTICLE — main content column
+   ============================================================ */
+ 
+.main-article {
+  flex: 3;                        /* takes 3/4 of the wrapper width */
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 24px 26px;
+}
+ 
+/* Article headline */
+.article-title {
+  font-size: 22px;
+  color: #1a252f;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+ 
+/* Author / date / category row */
+.article-meta {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 18px;
+  font-family: Arial, sans-serif;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+ 
+/* Feature image */
+.article-figure {
+  margin-bottom: 20px;
+}
+ 
+.article-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #ccc;
+}
+ 
+.article-figure figcaption {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+  font-style: italic;
+  font-family: Arial, sans-serif;
+}
+ 
+/* Body paragraphs */
+.article-body p {
+  margin-bottom: 14px;
+  text-align: justify;
+}
+ 
+/* Sub-headings inside article */
+.article-body h3 {
+  font-size: 16px;
+  color: #2c3e50;
+  margin: 20px 0 8px;
+  border-left: 3px solid #e67e22;
+  padding-left: 8px;
+}
+ 
+/* ============================================================
+   SIDEBAR — right column
+   ============================================================ */
+ 
+.sidebar {
+  flex: 1;                        /* takes 1/4 of the wrapper width */
+}
+ 
+/* Each sidebar box */
+.sidebar-section {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-top: 3px solid #2c3e50;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+ 
+.sidebar-section h3 {
+  font-size: 14px;
+  color: #1a252f;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+}
+ 
+/* Related news list */
+.related-list,
+.category-list {
+  list-style: none;
+}
+ 
+.related-list li,
+.category-list li {
+  border-bottom: 1px solid #f0f0f0;
+  padding: 6px 0;
+}
+ 
+.related-list li:last-child,
+.category-list li:last-child {
+  border-bottom: none;
+}
+ 
+.related-list li a,
+.category-list li a {
+  text-decoration: none;
+  color: #2c3e50;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+}
+ 
+.related-list li a:hover,
+.category-list li a:hover {
+  color: #e67e22;
+}
+ 
+/* ============================================================
+   FOOTER
+   ============================================================ */
+ 
+.site-footer {
+  background-color: #1a252f;
+  color: #aab7c4;
+  text-align: center;
+  padding: 16px 20px;
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  margin-top: 10px;
+}
+ 
+.footer-note {
+  font-size: 12px;
+  color: #6d8090;
+  margin-top: 5px;
+}

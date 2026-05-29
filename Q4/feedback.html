@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Online Feedback - SCET</title>
+  <!-- Shared stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== HEADER (same as index for consistency) ===== -->
+  <header class="site-header">
+    <div class="logo">
+      <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+        <rect width="50" height="50" rx="6" fill="#1a4f8a"/>
+        <text x="50%" y="55%" dominant-baseline="middle" text-anchor="middle"
+              fill="white" font-size="22" font-family="serif" font-weight="bold">S</text>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>Shivaji College of Engineering &amp; Technology</h1>
+      <p>Affiliated to Mumbai University &nbsp;|&nbsp; Estd. 1998 &nbsp;|&nbsp; NAAC Accredited</p>
+    </div>
+  </header>
+
+  <!-- ===== NAVIGATION BAR ===== -->
+  <nav class="navbar">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#courses">Courses</a></li>
+      <li><a href="index.html#departments">Departments</a></li>
+      <li><a href="index.html#facilities">Facilities</a></li>
+      <li><a href="index.html#admission">Admission</a></li>
+      <li><a href="feedback.html" class="active">Feedback</a></li>
+    </ul>
+  </nav>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="container">
+
+    <section>
+      <h2 class="section-title">Online Feedback System</h2>
+      <p class="form-note">
+        We value your feedback! Please fill in the form below. Your response will be
+        recorded without reloading the page (AJAX demo).
+      </p>
+
+      <!-- ===== FEEDBACK FORM ===== -->
+      <!--
+        This form uses JavaScript Fetch API (AJAX) to submit feedback.
+        The page does NOT reload when feedback is submitted.
+        Submitted feedback is stored in a JS array and displayed below.
+      -->
+      <form id="feedbackForm" class="styled-form">
+
+        <!-- Student Name -->
+        <div class="form-group">
+          <label for="fb_name">Your Name <span class="required">*</span></label>
+          <input type="text" id="fb_name" name="fb_name"
+                 placeholder="Enter your name" required minlength="2" />
+        </div>
+
+        <!-- Email -->
+        <div class="form-group">
+          <label for="fb_email">Email Address <span class="required">*</span></label>
+          <input type="email" id="fb_email" name="fb_email"
+                 placeholder="your@email.com" required />
+        </div>
+
+        <!-- Rating dropdown -->
+        <div class="form-group">
+          <label for="fb_rating">Overall Rating <span class="required">*</span></label>
+          <select id="fb_rating" name="fb_rating" required>
+            <option value="">-- Select Rating --</option>
+            <option value="5">⭐⭐⭐⭐⭐ Excellent</option>
+            <option value="4">⭐⭐⭐⭐ Good</option>
+            <option value="3">⭐⭐⭐ Average</option>
+            <option value="2">⭐⭐ Below Average</option>
+            <option value="1">⭐ Poor</option>
+          </select>
+        </div>
+
+        <!-- Feedback message -->
+        <div class="form-group">
+          <label for="fb_message">Your Feedback <span class="required">*</span></label>
+          <textarea id="fb_message" name="fb_message" rows="4"
+                    placeholder="Write your feedback here..." required minlength="10"></textarea>
+        </div>
+
+        <!-- Submit button -->
+        <button type="button" id="submitFeedbackBtn" class="btn-submit">
+          Submit Feedback
+        </button>
+
+        <!-- Success / error messages shown via JS -->
+        <p id="feedbackMsg" class="success-msg" style="display:none;"></p>
+
+      </form>
+    </section>
+
+    <!-- ===== FEEDBACK DISPLAY SECTION ===== -->
+    <!--
+      This section is empty at first.
+      When user submits feedback, JS will dynamically add feedback cards here.
+    -->
+    <section id="feedbackDisplay">
+      <h2 class="section-title">Submitted Feedback</h2>
+
+      <!-- Counter to show how many feedbacks are submitted -->
+      <p id="feedbackCount" class="form-note">No feedback submitted yet.</p>
+
+      <!-- Feedback cards will be injected here by script.js -->
+      <div id="feedbackList"></div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-col">
+        <h3>Contact Us</h3>
+        <p>Plot No. 14, Sector 7, Nerul,<br/>Navi Mumbai – 400706</p>
+        <p>Phone: (022) 2770-1234</p>
+        <p>Email: info@scet.edu.in</p>
+      </div>
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <p><a href="index.html">Home</a></p>
+        <p><a href="#feedbackDisplay">View Feedbacks</a></p>
+      </div>
+      <div class="footer-col">
+        <h3>Office Hours</h3>
+        <p>Monday – Saturday</p>
+        <p>9:00 AM – 5:00 PM</p>
+        <p>Sunday: Closed</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Shivaji College of Engineering &amp; Technology. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Shared JS file -->
+  <script src="script.js"></script>
+
+</body>
+</html>

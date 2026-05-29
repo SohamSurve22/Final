@@ -1,0 +1,469 @@
+/*
+  ================================================
+  style.css — Shared Styles for SCET College Portal
+  Author  : Student Project
+  Purpose : Basic, clean styling for both pages
+  ================================================
+*/
+
+/* ---- CSS Reset / Base ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 15px;
+  color: #333;
+  background-color: #f5f5f2;
+  line-height: 1.6;
+}
+
+a {
+  color: #1a4f8a;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ================================================
+   HEADER
+================================================ */
+.site-header {
+  background-color: #1a4f8a;  /* Dark blue — college colour */
+  color: white;
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.site-header .logo {
+  flex-shrink: 0;
+}
+
+.site-header .header-text h1 {
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.3px;
+}
+
+.site-header .header-text p {
+  font-size: 12px;
+  color: #c8d8ee;
+  margin-top: 3px;
+  font-family: Arial, sans-serif;
+}
+
+/* ================================================
+   NAVIGATION BAR
+================================================ */
+.navbar {
+  background-color: #163e6e;
+  padding: 0 24px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.navbar ul li a {
+  display: block;
+  color: #d0e4f7;
+  padding: 10px 16px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  background-color: #2a6db5;
+  color: white;
+}
+
+/* ================================================
+   MAIN CONTAINER
+================================================ */
+.container {
+  max-width: 960px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+/* ================================================
+   SECTION TITLES
+================================================ */
+.section-title {
+  font-size: 18px;
+  color: #1a4f8a;
+  border-bottom: 2px solid #1a4f8a;
+  padding-bottom: 6px;
+  margin-bottom: 14px;
+  margin-top: 32px;
+  font-family: Georgia, serif;
+}
+
+/* ================================================
+   WELCOME BANNER
+================================================ */
+.welcome-banner {
+  background: #fff;
+  border: 1px solid #d0d8e4;
+  border-radius: 4px;
+  margin-top: 8px;
+  overflow: hidden;
+}
+
+.college-image {
+  display: block;
+  width: 100%;
+  background: #eaf0f8;
+}
+
+.welcome-text {
+  padding: 16px 20px;
+}
+
+.welcome-text h2 {
+  font-size: 17px;
+  color: #1a4f8a;
+  margin-bottom: 8px;
+}
+
+.welcome-text p {
+  font-size: 14px;
+  color: #444;
+  font-family: Arial, sans-serif;
+}
+
+/* ================================================
+   TABLES
+================================================ */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+  background: #fff;
+}
+
+.data-table thead {
+  background-color: #1a4f8a;
+  color: white;
+}
+
+.data-table th {
+  padding: 10px 12px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.data-table td {
+  padding: 9px 12px;
+  border-bottom: 1px solid #dde3ec;
+  color: #333;
+}
+
+/* Alternate row shading */
+.data-table tbody tr:nth-child(even) {
+  background-color: #eef2f8;
+}
+
+.data-table tbody tr:hover {
+  background-color: #ddeaf8;
+}
+
+/* ================================================
+   TWO-COLUMN LAYOUT (Admission + Facilities)
+================================================ */
+.two-col {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.two-col section {
+  flex: 1;
+  min-width: 260px;
+}
+
+/* ================================================
+   LISTS
+================================================ */
+.styled-list {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background: #fff;
+  border: 1px solid #d8dfe8;
+  padding: 16px 16px 16px 36px;
+  border-radius: 4px;
+  line-height: 1.9;
+}
+
+/* Unordered list bullets */
+.bullet-list {
+  list-style-type: square;
+}
+
+/* ================================================
+   IMAGE SECTION (campus life banner)
+================================================ */
+.image-section {
+  margin-top: 10px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #c8d4e0;
+}
+
+.campus-life {
+  background: #f0f4f0;
+}
+
+/* ================================================
+   INQUIRY / FEEDBACK FORM
+================================================ */
+.styled-form {
+  background: #fff;
+  border: 1px solid #d0d8e4;
+  border-radius: 4px;
+  padding: 22px 24px;
+  max-width: 640px;
+}
+
+.form-note {
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Each label+input pair */
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  color: #2c3e6a;
+  margin-bottom: 5px;
+}
+
+/* Required asterisk */
+.required {
+  color: #c0392b;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #bbbfcc;
+  border-radius: 3px;
+  background-color: #fafafa;
+  color: #333;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+/* Focus highlight */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #2a6db5;
+  background-color: #f0f6ff;
+}
+
+.form-group small {
+  font-size: 12px;
+  color: #888;
+  font-family: Arial, sans-serif;
+  display: block;
+  margin-top: 3px;
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+/* Submit button */
+.btn-submit {
+  background-color: #1a4f8a;
+  color: white;
+  border: none;
+  padding: 10px 28px;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+  cursor: pointer;
+  border-radius: 3px;
+  margin-top: 4px;
+  transition: background 0.2s;
+}
+
+.btn-submit:hover {
+  background-color: #2a6db5;
+}
+
+/* Success message shown after form submit */
+.success-msg {
+  margin-top: 12px;
+  padding: 10px 14px;
+  background-color: #d4edda;
+  border: 1px solid #b0d9bb;
+  border-radius: 3px;
+  color: #2e6b3e;
+  font-size: 14px;
+  font-family: Arial, sans-serif;
+}
+
+/* ================================================
+   FEEDBACK CARDS (displayed after AJAX submit)
+================================================ */
+.feedback-card {
+  background: #fff;
+  border: 1px solid #d0dce8;
+  border-left: 4px solid #1a4f8a;
+  border-radius: 3px;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.feedback-card .fb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.feedback-card .fb-name {
+  font-weight: bold;
+  color: #1a4f8a;
+  font-size: 15px;
+}
+
+.feedback-card .fb-rating {
+  background-color: #1a4f8a;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+}
+
+.feedback-card .fb-email {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.feedback-card .fb-message {
+  color: #444;
+  line-height: 1.5;
+}
+
+.feedback-card .fb-time {
+  font-size: 11px;
+  color: #aaa;
+  margin-top: 8px;
+  text-align: right;
+}
+
+/* ================================================
+   FOOTER
+================================================ */
+.site-footer {
+  background-color: #1a2a42;
+  color: #c0ccdd;
+  margin-top: 48px;
+  padding: 24px 24px 0;
+}
+
+.footer-content {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 960px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #2c3e5a;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 180px;
+}
+
+.footer-col h3 {
+  font-size: 14px;
+  color: #e0eaf7;
+  margin-bottom: 10px;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.footer-col p {
+  font-size: 13px;
+  font-family: Arial, sans-serif;
+  margin-bottom: 4px;
+  line-height: 1.6;
+}
+
+.footer-col a {
+  color: #8ab4d8;
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+  color: #b8d4f0;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 12px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+  color: #7a8ea8;
+}
+
+/* ================================================
+   RESPONSIVE — basic adjustments for small screens
+================================================ */
+@media (max-width: 600px) {
+
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .two-col {
+    flex-direction: column;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+}
