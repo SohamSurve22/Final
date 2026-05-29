@@ -1,0 +1,56 @@
+/* Custom Styles for Food Ordering System */
+/* Simple additions to augment standard Bootstrap classes */
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+}
+
+/* Cursor helper for clickables without anchors */
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Card hover scaling to feel interactive and polished */
+.card {
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Category Filter active transitions */
+.btn-group .btn {
+  transition: all 0.2s ease;
+}
+
+/* Styled Table scrollbars for small viewports */
+.table-responsive {
+  scrollbar-width: thin;
+}
+
+/* Input form focuses styled to match secondary warning color */
+.form-control:focus, .form-check-input:focus {
+  border-color: #ffc107;
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+/* Checkmark Icon Bounce in Success Page */
+.bi-check-circle-fill {
+  display: inline-block;
+  animation: pop 0.4s ease-out;
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
