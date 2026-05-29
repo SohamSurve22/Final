@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Form</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <section class="login-shell" id="loginShell">
+    <div class="login-header">
+      <h1>Login</h1>
+      <p>Enter your details and submit the form. Wrong entries will be highlighted.</p>
+    </div>
+
+    <form id="loginForm" novalidate>
+      <div class="field" id="usernameField">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter username" autocomplete="username" />
+        <div class="message" id="usernameMessage"></div>
+      </div>
+      <div class="field" id="passwordField">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" autocomplete="current-password" minlength="8" />
+        <div class="message" id="passwordMessage"></div>
+      </div>
+
+      <div class="actions">
+        <button type="submit">Sign In</button>
+      </div>
+    </form>
+
+    <p class="hint">Use any non-empty username and a password with at least 8 characters, including uppercase, lowercase, a number, and a symbol.</p>
+  </section>
+
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const loginShell = document.getElementById('loginShell');
+    const usernameInput = document.getElementById('username');
+    const passwordInput = document.getElementById('password');
+    const usernameField = document.getElementById('usernameField');
+    const passwordField = document.getElementById('passwordField');
+    const usernameMessage = document.getElementById('usernameMessage');
+    const passwordMessage = document.getElementById('passwordMessage');
+
+    function setFieldState(field, messageElement, isValid, message) {
+      field.classList.remove('error', 'success');
+      messageElement.classList.remove('error', 'success');
+      messageElement.style.color = '';
+
+      if (!message) {
+        messageElement.textContent = '';
+        return;
+      }
+
+      field.classList.add(isValid ? 'success' : 'error');
+      messageElement.classList.add(isValid ? 'success' : 'error');
+      messageElement.textContent = message;
+    }
+
+    function validateUsername() {
+      const value = usernameInput.value.trim();
+      const isValid = value.length > 0;
+      setFieldState(
+        usernameField,
+        usernameMessage,
+        isValid,
+        isValid ? 'Username looks good.' : 'Username is required.'
+      );
+      return isValid;
+    }
+
+    function validatePassword() {
+      const value = passwordInput.value;
+      const hasLength = value.length >= 8;
+      const hasUppercase = /[A-Z]/.test(value);
+      const hasLowercase = /[a-z]/.test(value);
+      const hasNumber = /[0-9]/.test(value);
+      const hasSymbol = /[^A-Za-z0-9]/.test(value);
+      const isValid = hasLength && hasUppercase && hasLowercase && hasNumber && hasSymbol;
+      setFieldState(
+        passwordField,
+        passwordMessage,
+        isValid,
+        isValid ? 'Password accepted.' : 'Password must be 8+ characters with upper, lower, number, and symbol.'
+      );
+      return isValid;
+    }
+
+    usernameInput.addEventListener('input', validateUsername);
+    passwordInput.addEventListener('input', validatePassword);
+
+    loginForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const usernameValid = validateUsername();
+      const passwordValid = validatePassword();
+
+      if (usernameValid && passwordValid) {
+        loginShell.classList.remove('shake');
+        loginForm.reset();
+        usernameField.classList.remove('success');
+        passwordField.classList.remove('success');
+        usernameMessage.textContent = 'Form submitted successfully.';
+        passwordMessage.textContent = '';
+      } else {
+        loginShell.classList.remove('shake');
+        void loginShell.offsetWidth;
+        loginShell.classList.add('shake');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f7f3ed;
+  --card: #fffaf4;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #b45309;
+  --accent-dark: #92400e;
+  --line: #e5dccf;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: linear-gradient(180deg, #fffdf8 0%, var(--bg) 100%);
+}
+
+.page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.card {
+  width: min(100%, 560px);
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.7rem, 4vw, 2.4rem);
+}
+
+.description {
+  margin: 0 0 20px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.login-form label,
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+}
+
+input:focus {
+  border-color: var(--accent);
+}
+
+button {
+  border: none;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 0.98rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button[type="submit"] {
+  background: var(--accent);
+  color: white;
+}
+
+button[type="submit"]:hover,
+.ghost:hover {
+  background: var(--accent-dark);
+  color: white;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 20px 0 14px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.stats strong {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 2rem;
+}
+
+.ghost {
+  background: #ede7dc;
+  color: var(--text);
+}
+
+.user-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.user-list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.user-list span {
+  font-weight: 600;
+}
+
+.user-list small {
+  color: var(--muted);
+}
+
+.user-list .remove {
+  padding: 8px 12px;
+  background: #f3f4f6;
+  color: var(--text);
+}
+
+.user-list .remove:hover {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.empty {
+  color: var(--muted);
+  padding: 4px 0;
+}
+
+@media (max-width: 640px) {
+  .card {
+    padding: 18px;
+  }
+
+  .row,
+  .stats,
+  .user-list li {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f7f7f7;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --line: #d1d5db;
+  --box: #c2410c;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.stage {
+  min-height: 100vh;
+  display: grid;
+  gap: 12px;
+  align-content: center;
+  justify-items: center;
+  padding: 24px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+}
+
+p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  line-height: 1.5;
+  text-align: center;
+}
+
+.track {
+  position: relative;
+  width: min(100%, 900px);
+  height: 180px;
+  margin: 8px auto 0;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+
+.box {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  background: var(--box);
+  transform: translateY(-50%);
+  animation: slide 4s ease-in-out infinite alternate;
+}
+
+@keyframes slide {
+  from {
+    left: 18px;
+  }
+  to {
+    left: calc(100% - 98px);
+  }
+}
+
+@media (max-width: 640px) {
+  .track {
+    height: 140px;
+  }
+
+  .box {
+    width: 60px;
+    height: 60px;
+    animation-duration: 3s;
+  }
+
+  @keyframes slide {
+    from {
+      left: 14px;
+    }
+    to {
+      left: calc(100% - 74px);
+    }
+  }
+}

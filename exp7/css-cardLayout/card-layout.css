@@ -1,0 +1,89 @@
+* {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #f7f9fc 0%, #e8eef8 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+      }
+
+      .container {
+        width: 100%;
+        max-width: 1100px;
+      }
+
+      .heading {
+        text-align: center;
+        margin-bottom: 28px;
+      }
+
+      .heading h1 {
+        margin: 0;
+        font-size: 34px;
+        color: #10203a;
+      }
+
+      .heading p {
+        margin: 10px 0 0;
+        color: #556070;
+      }
+
+      .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+      }
+
+      .card {
+        flex: 1 1 260px;
+        max-width: 320px;
+        background: #ffffff;
+        border: 1px solid #d7deea;
+        border-radius: 18px;
+        box-shadow: 0 14px 30px rgba(16, 32, 58, 0.12);
+        padding: 28px 22px;
+        text-align: center;
+      }
+
+      .card h2 {
+        margin: 0 0 12px;
+        font-size: 24px;
+        color: #10203a;
+      }
+
+      .card p {
+        margin: 0 0 18px;
+        color: #5b6678;
+        line-height: 1.6;
+      }
+
+      .card a {
+        display: inline-block;
+        padding: 10px 18px;
+        border-radius: 999px;
+        background: #1d4ed8;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .card a:hover {
+        background: #163fae;
+      }
+
+      @media (max-width: 640px) {
+        .heading h1 {
+          font-size: 28px;
+        }
+
+        .card {
+          max-width: 100%;
+        }
+      }

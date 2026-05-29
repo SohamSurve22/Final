@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Responsive Navigation Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="site-header" id="siteHeader">
+      <nav class="nav-bar" aria-label="Main navigation">
+        <div class="brand">
+          <div class="brand-mark">N</div>
+          <div>
+            <div>North Side</div>
+            <small style="color: var(--muted); font-weight: 500;">Simple responsive menu</small>
+          </div>
+        </div>
+
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#services">Services</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="hero" id="home">
+      <section class="hero-card">
+        <h1>Responsive navigation menu</h1>
+        <p>
+          Resize the page to see the navigation shift into a hamburger menu on smaller screens.
+          The layout stays clean and readable on mobile without feeling overdesigned.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    const siteHeader = document.getElementById('siteHeader');
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    function closeMenu() {
+      siteHeader.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Open menu');
+    }
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = siteHeader.classList.toggle('menu-open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+    });
+
+    navLinks.addEventListener('click', (event) => {
+      if (event.target.matches('a')) {
+        closeMenu();
+      }
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 760) {
+        closeMenu();
+      }
+    });
+  </script>
+</body>
+</html>
